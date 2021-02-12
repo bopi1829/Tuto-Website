@@ -6,21 +6,35 @@ body {
     margin: 0;
     line-height: 1.4;
     letter-spacing: 0.2;
-    font-family:"Source Sana Pro", sans-serif;
+    font-family:"Source Sans Pro", sans-serif;
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background: grey;
     padding: 20px;
     height: auto;
     color: #FFFFFF;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.header-title {
+    float: left;
+    margin: 0;
+    font-style: italic;
+    text-transform: capitalize;
+    z-index: 4;
 }
 
 .header-nav {
-    height: 50%;
-    margin: 20px 0;
+    margin-top: 10px;
+    float: right;
     text-align: center;
-    background: lightcoral;
+    z-index: 3;
 }
 
 .header-nav a {
@@ -38,16 +52,11 @@ body {
     height: auto;
 }
 
-.header-title {
-    margin-top: 0;
-    font-style: italic;
-    text-transform: capitalize;
-}
-
 .main {
     background: lightgrey;
-    padding: 20px;
-    font-size: 16px;
+    padding: 70px 20px 20px;
+    font-size: 20px;
+    z-index: 1;
 }
 
 .main p {
@@ -62,8 +71,22 @@ body {
 
 .button {
     color: #FFFFFF;
-    background: #fd67fd;
+    background: lightcoral;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 20px;
     padding: 0.4em 0.5em;
+}
+
+.alignLeft {
+    float: left;
+    margin-right: 15px;
+}
+
+.alignRight {
+    float: right;
+    margin-left: 15px;
+}
+
+hr {
+    clear: both;
 }
